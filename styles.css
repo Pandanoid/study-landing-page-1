@@ -1,0 +1,109 @@
+:root {
+  --color-main: #14bf98;
+  --bg-color-main: #113448;
+}
+
+body {
+  font: 400 1rem/1.5625rem "Open Sans", sans-serif;
+}
+/* common styles */
+.dropdown-menu {
+  border-radius: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  background-color: var(--bg-color-main);
+}
+.dropdown-menu .dropdown-item {
+  font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.25rem 1.5rem;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: var(--color-main);
+}
+.dropdown-menu .dropdown-divider {
+  width: 84%;
+  margin: 0.75rem auto; 
+  opacity: 0.2;
+  border-top-color:  #b5bcc4 ;
+}
+.hexagon {
+  width: 1.625rem;
+  height: 1.625rem;
+  background: url(images/hexagon-green.svg) center center / 1.625rem 1.625rem
+    no-repeat;
+}
+/* page styles */
+.header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(images/header-background.jpg) center center no-repeat;
+  background-size: cover;
+}
+.header-menu {
+  padding-top: 2.125rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+
+.header-logo {
+  height: 2rem;
+}
+
+.header-navigation {
+  display: flex;
+}
+.header-menu .nav-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-menu .nav-link:hover {
+  color: var(--color-main);
+}
+.social-icon:hover {
+  color: var(--color-main);
+}
+
+.social-icon .hexagon {
+  position: absolute;
+}
+.header-menu .social-icon {
+  width: 1.625rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
+}
+
+.social-icon .fa {
+  position: relative;
+}
+.social-icon:hover .hexagon {
+  background-image: url(images/hexagon-white.svg);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.header-content {
+  text-align: center;
+  padding-top: 13rem;
+  padding-bottom: 7.5rem;
+}
+.header h1 {
+  font: 700 3.5rem/4rem "Montserrat", sans-serif;
+  color: #fff;
+}
+.header-content p {
+  margin: auto;
+  max-width: 610px;
+  color: #dfe5ec;
+}
