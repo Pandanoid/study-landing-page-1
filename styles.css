@@ -3,10 +3,52 @@
   --bg-color-main: #113448;
 }
 
-body {
+body,
+p {
+  color: #787976;
   font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 }
+h1 {
+  font: 700 3.5rem/4rem "Montserrat", sans-serif;
+  color: #fff;
+}
+
+h2 {
+  color: #484a46;
+  font: 700 1.75rem/2.125rem "Montserrat", sans-serif;
+}
+
+h4 {
+  color: #484a46;
+  font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
 /* common styles */
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1140px;
+  }
+}
+.card {
+  border: none;
+  align-self: start;
+}
+.card-title {
+  margin-bottom: 0.625rem;
+}
+.fa-stack {
+  width: 2em;
+}
+
 .dropdown-menu {
   border-radius: 0;
   padding-top: 1rem;
@@ -26,15 +68,14 @@ body {
 }
 .dropdown-menu .dropdown-divider {
   width: 84%;
-  margin: 0.75rem auto; 
+  margin: 0.75rem auto;
   opacity: 0.2;
-  border-top-color:  #b5bcc4 ;
+  border-top-color: #b5bcc4;
 }
 .hexagon {
-  width: 1.625rem;
-  height: 1.625rem;
-  background: url(images/hexagon-green.svg) center center / 1.625rem 1.625rem
-    no-repeat;
+  width: 1em;
+  height: 1em;
+  background: url(images/hexagon-green.svg) center / 1em no-repeat;
 }
 /* page styles */
 .header {
@@ -57,6 +98,7 @@ body {
 }
 
 .header-navigation {
+  align-items: center;
   display: flex;
 }
 .header-menu .nav-link {
@@ -68,26 +110,14 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+.social-icons.nav .nav-link {
+  padding: 0 0.25rem;
+}
 .header-menu .nav-link:hover {
   color: var(--color-main);
 }
-.social-icon:hover {
-  color: var(--color-main);
-}
 
-.social-icon .hexagon {
-  position: absolute;
-}
-.header-menu .social-icon {
-  width: 1.625rem;
-  height: 1.625rem;
-  line-height: 1.625rem;
-}
-
-.social-icon .fa {
-  position: relative;
-}
-.social-icon:hover .hexagon {
+.nav-link:hover .hexagon {
   background-image: url(images/hexagon-white.svg);
 }
 .dropdown:hover .dropdown-menu {
@@ -98,12 +128,69 @@ body {
   padding-top: 13rem;
   padding-bottom: 7.5rem;
 }
-.header h1 {
-  font: 700 3.5rem/4rem "Montserrat", sans-serif;
-  color: #fff;
-}
+
 .header-content p {
   margin: auto;
   max-width: 610px;
   color: #dfe5ec;
+}
+
+.btn-discover-header {
+  box-shadow: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.btn-discover-header a {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.375rem 2.125rem 1.375rem 2.125rem;
+  border: 0.125rem solid #14bf98;
+  border-radius: 0.25rem;
+  background-color: #14bf98;
+  color: #fff;
+  font: 700 0.75rem/0 "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-discover-header:hover a {
+  background-color: transparent;
+  color: var(--color-main);
+}
+
+.intro {
+  padding-top: 6.875rem;
+}
+
+.section-title {
+  color: #14bf98;
+  font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+  color: #484a46;
+  font: 700 1rem/1.375rem "Montserrat", sans-serif;
+}
+.intro-img-container {
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+.intro-img {
+  transition: transform 0.3s;
+}
+.intro-img:hover {
+  transform: scale(1.15);
+}
+.card-hexagon {
+  font-size: 3rem;
+}
+.intro-cards {
+  padding-top: 3rem;
+  padding-bottom: 2.875rem;
+}
+
+.intro-cards .fa-stack-1x {
+  font-size: 0.75em;
 }
