@@ -3,6 +3,7 @@
   --bg-color-main: #113448;
 }
 
+
 body,
 p {
   color: #787976;
@@ -30,6 +31,10 @@ h4 {
   font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
 }
 
+.list-unstyled {
+  list-style: none;
+}
+
 .text-primary {
   color: var(--color-main) !important;
 }
@@ -43,8 +48,10 @@ h4 {
 .inverted-text,
 .inverted-text p,
 .inverted-text h2,
-a.inverted-text:hover {
-  color: #fff;
+.inverted-text h4,
+a.inverted-text:hover,
+.inverted-text a, .inverted-text a:hover {
+  color: #dfe5ec;
 }
 
 :root {
@@ -110,37 +117,55 @@ a.inverted-text:hover {
   transform: none;
 }
 
-/* .inverted-text .form-control {
-  border: 1px solid #39728f;
-  background-color: #2a5d77;
-  color: #fff;
-} */
-
 .btn {
   text-transform: uppercase;
   display: inline-block;
-  padding: 1.375rem 2.125rem 1.375rem 2.125rem;
-  border: 0.125rem solid #14bf98;
+  padding: 0.75rem 2.125rem;
   border-radius: 0.25rem;
-  background-color: #14bf98;
-  color: #fff;
-  font: 700 0.75rem/0 "Montserrat", sans-serif;
+  font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
   text-decoration: none;
   transition: all 0.2s;
 }
 
-.btn:hover {
-  background-color: transparent;
-  color: var(--color-main);
+.btn-sm {
+  padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
 }
 
-.btn:focus {
+.btn:focus, .btn:active, .btn:focus:active {
   box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  border: 0.125rem solid #14bf98;
+  background-color: #14bf98;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: transparent;
+  color: var(--color-main);
+  border-color: var(--color-main);
+}
+
+.btn-secondary {
+  background-color: #f1f4f7;
+  border: none;
+  color: #7b7e85;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: var(--color-main);
+  color: #fff;
 }
 
 .section {
   padding-bottom: 5.625rem;
   padding-top: 5.625rem;
+}
+
+.dark-section {
+  background-color: #153e52;
 }
 
 .section-title {
@@ -645,14 +670,89 @@ a.inverted-text:hover {
   left: 100%;
 }
 
-/* CALL ME  */
-
-.call-me-section {
-  background-color: #153e52;
-}
 
 /* PROJECTS */
 
 .button-group {
   display: flex;
+  justify-content: center ;
+}
+
+.btn-filters {
+  margin-bottom: 1.25rem;
+}
+
+.btn-filters .btn + .btn {
+  margin-left: 0.375rem;
+}
+
+.project-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  width: 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item-inner {
+  padding-top: 100%;
+}
+
+.project-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-item:hover img {
+  transform: scale(1.15);
+}
+
+.footer p, .footer ul {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.footer h4 {
+  margin-bottom: 0.75rem;
+}
+
+.footer ul li {
+  margin-bottom: 0.375rem;
+}
+
+.copyright {
+  margin-top: 2.25rem;
+  text-align: center;
 }
