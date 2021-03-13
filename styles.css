@@ -31,6 +31,29 @@ h4 {
   font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
 }
 
+img {
+  max-width: 100%
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+.list-square {
+  list-style-type: none;
+}
+
+.list-square li:before {
+  content: "■";
+  color: var(--color-main); /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  vertical-align: middle;
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-top: -0.5em;
+  line-height: 1;
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
 .list-unstyled {
   list-style: none;
 }
@@ -355,13 +378,6 @@ a.inverted-text:hover,
   border: 1px solid rgba(128, 128, 128, 0.199);
 }
 
-.card-services ul {
-  list-style-type: square;
-  color: var(--color-main);
-}
-.card-services ul li span {
-  color: #484a46;
-}
 .service-price {
   margin-bottom: 0.25rem;
   color: #484a46;
@@ -604,18 +620,9 @@ a.inverted-text:hover,
   margin-bottom: 1rem;
 }
 
-.quality-tab-item ul {
-  list-style-type: square;
-  color: var(--color-main);
-  padding-left: 1rem;
-}
 .quality-tab-item span {
   color: #484a46;
   font-weight: 900;
-}
-
-.quality-tab-item ul li span {
-  color: #787976;
 }
 
 /* SLIDER */
@@ -738,6 +745,81 @@ a.inverted-text:hover,
 .project-item:hover img {
   transform: scale(1.15);
 }
+
+/* consultans-secion */
+
+.consultants-section {
+  background-color: #fbfbfb;
+}
+
+.consultants-section .section-header {
+  text-align: center;
+}
+
+.consultant-item {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.consultant-item .job-title {
+  margin-bottom: 0.75rem;
+  color: #484a46;
+  font: 700 1rem/1.375rem "Montserrat", sans-serif;
+}
+
+.consultant-item .consultant-name {
+  font: 400 1.125rem/1.625rem "Open Sans", sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.consultant-item img {
+  margin-bottom: 1.25rem;
+}
+
+.consultant-item .social-icons {
+  justify-content: center;
+}
+
+.consultant-item a {
+  color: #fff;
+}
+
+.consultant-item a:hover {
+  color: var(--color-main)
+}
+
+.consultant-img  {
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.consultant-img img {
+  transition: all 0.3s ease;
+}
+
+.consultant-img:hover img {
+  transform: scale(1.15);
+}
+
+
+/* ABOUT */
+
+.about-section {
+  margin-top: 6.125rem;
+  margin-bottom: 6.125rem;
+}
+
+.about-img img {
+  border-radius: 0.25rem;
+}
+
+.about-content {
+  margin-left: 3.125rem;
+}
+
+
+/* FOOTER */
 
 .footer p, .footer ul {
   font-size: 0.875rem;
