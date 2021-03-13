@@ -21,7 +21,6 @@ h2 {
 }
 
 h3 {
-  text-align: center;
   color: #484a46;
   font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
 }
@@ -98,10 +97,10 @@ a.inverted-text:hover,
 
 .form-group .label-control {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0.8125rem;
   left: 1.375rem;
   transition: all 0.2s ease;
+  font-size: 0.875rem;
 }
 
 .form-select,
@@ -137,7 +136,6 @@ a.inverted-text:hover,
 .form-control:not(:placeholder-shown) + .label-control {
   top: 0.125rem;
   font-size: 0.75rem;
-  transform: none;
 }
 
 .btn {
@@ -189,6 +187,10 @@ a.inverted-text:hover,
 
 .dark-section {
   background-color: #153e52;
+}
+
+.grey-section {
+  background-color: #fbfbfb;
 }
 
 .section-title {
@@ -295,6 +297,15 @@ a.inverted-text:hover,
 .social-icons.nav .nav-link {
   padding: 0 0.25rem;
 }
+
+.social-icons a {
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: var(--color-main)
+}
+
 .header-menu .nav-link:hover {
   color: var(--color-main);
 }
@@ -366,6 +377,9 @@ a.inverted-text:hover,
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.card-services h3 {
+  text-align: center;
 }
 .services .card-body {
   min-height: 350px;
@@ -748,10 +762,6 @@ a.inverted-text:hover,
 
 /* consultans-secion */
 
-.consultants-section {
-  background-color: #fbfbfb;
-}
-
 .consultants-section .section-header {
   text-align: center;
 }
@@ -780,16 +790,7 @@ a.inverted-text:hover,
   justify-content: center;
 }
 
-.consultant-item a {
-  color: #fff;
-}
-
-.consultant-item a:hover {
-  color: var(--color-main)
-}
-
 .consultant-img  {
-  
   position: relative;
   overflow: hidden;
 }
@@ -818,6 +819,66 @@ a.inverted-text:hover,
   margin-left: 3.125rem;
 }
 
+.about-counters {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.about-counters .counter {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.about-counters .counter .count {
+  font-size: 3rem;
+  color: var(--color-main);
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-counters .counter .text {
+  font-size: 0.875rem;
+  max-width: 2rem;
+  line-height: 1.4;
+  margin-left: 0.625rem;
+}
+
+/* Contact section */
+
+.contact-section h2 {
+  margin-bottom: 1.625rem;
+}
+
+.contact-info {
+  line-height: 1.8;
+}
+
+.contact-info i {
+  font-size: 0.85em;
+  margin-right: 5px;
+  color: var(--color-main);
+}
+
+.contact-info + .contact-info {
+  margin-left: 1.625rem;
+}
+
+.contact-info a {
+  color: inherit;
+}
+
+.contact-section .contacts {
+  margin-bottom: 3.25rem;
+}
+
+.contact-section .social-icons {
+  font-size: 1.625rem;
+}
+
+.contact-section .contact-form {
+  margin-left: 1.5rem;
+}
 
 /* FOOTER */
 
